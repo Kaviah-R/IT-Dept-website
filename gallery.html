@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - IT Department</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .main-heading {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2em;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 0 20px 40px 20px;
+    }
+    .gallery-container img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+    #lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid #fff;
+      border-radius: 10px;
+    }
+    .back-button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #00385e;  /* New background color */
+  color: white;               /* Text color white */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #002b44; /* Slightly darker on hover */
+}
+  </style>
+</head>
+
+<body>
+  <a href="/" class="back-button">← Back to Home</a>
+
+  <header>
+    <h1>IT Department Website</h1>
+  </header>
+
+  <section class="gallery">
+    <h1 class="main-heading">Gallery</h1>
+    <div class="gallery-container">
+      <hr href="{{ url_for('static', filename='images/w1.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w1.jpg') }}" alt="Photo 1">
+    </hr>
+       <hr href="{{ url_for('static', filename='images/w2.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w2.jpg') }}" alt="Photo 2">
+    </hr>
+    <hr href="{{ url_for('static', filename='images/w3.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w3.jpg') }}" alt="Photo 3">
+    </hr>
+    <hr href="{{ url_for('static', filename='images/w4.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w4.jpg') }}" alt="Photo 4">
+    </hr>
+     <hr href="{{ url_for('static', filename='images/w5.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w5.jpg') }}" alt="Photo 5"></hr>
+       <hr href="{{ url_for('static', filename='images/w10.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w10.jpeg') }}" alt="Photo 5"></hr>
+       <hr href="{{ url_for('static', filename='images/w20.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w20.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w6.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w6.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w8.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w8.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w7.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w7.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w9.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w9.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w14.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w14.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w11.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w11.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w13.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w13.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w12.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w12.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w15.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w15.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w16.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w16.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w18.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w18.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w22.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w22.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/w21.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/w21.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d1.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d1.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d2.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d2.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d3.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d3.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d4.jpeg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d4.jpeg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d5.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d5.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d6.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d6.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d7.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d7.jpg') }}" alt="Photo 5"></a>
+       <hr href="{{ url_for('static', filename='images/d8.jpg') }}" target="_blank">
+      <img src="{{ url_for('static', filename='images/d8.jpg') }}" alt="Photo 5"></a>
+    </div>
+   </section>
+   <div id="lightbox">
+    <img src="" alt="Large View">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    // Attach click events to gallery images
+    document.querySelectorAll('.gallery-container img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    // Close lightbox when clicking outside image
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
